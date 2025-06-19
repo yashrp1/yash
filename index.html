@@ -37,7 +37,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            overflow-x: visible;
+            overflow-x: auto;
         }
 
         .logo {
@@ -49,8 +49,11 @@
 
         .nav-links {
             display: flex;
+            flex-wrap: nowrap;      /* prevent wrapping unless needed */
             gap: 2rem;
-            flex-wrap: wrap;
+            flex-shrink: 1;
+            min-width: 0;           /* <-- CRUCIAL: prevents flex items from overflowing */
+            overflow-x: auto;  
         }
 
         .nav-links a {
