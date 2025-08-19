@@ -320,6 +320,9 @@
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
         }
 
         .project-card:hover {
@@ -355,6 +358,10 @@
 
         .project-content {
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            min-height: 260px;
         }
 
         .project-content h4 {
@@ -410,6 +417,7 @@
             margin-top: 16px;
             flex-wrap: wrap;
         }
+        .project-actions.buttons-main { margin-top: auto; }
 
         .screenshot-scroll {
             display: flex;
@@ -917,7 +925,7 @@
                             <span class="badge">Node.js</span>
                             <span class="badge">MongoDB</span>
                         </div>
-                        <div class="project-actions">
+                        <div class="project-actions buttons-main">
                             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.crsnovelsandaudiobooks&hl=en_IN" target="_blank" rel="noopener">View on Google Play</a>
                             <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener">Visit Website</a>
                         </div>
@@ -952,7 +960,7 @@
                             <span class="badge">MySQL</span>
                             <span class="badge">PhpMyAdmin</span>
                         </div>
-                        <div class="project-actions">
+                        <div class="project-actions buttons-main">
                             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener">View on Google Play</a>
                         </div>
                     </div>
