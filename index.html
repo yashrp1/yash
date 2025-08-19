@@ -449,10 +449,8 @@
         }
         .project-actions.buttons-main { margin-top: auto; }
         .project-actions .btn i { margin-right: 8px; }
-        .project-footer { margin-top: auto; }
-
-        /* Ensure buttons have same width where there are two */
-        .project-footer .btn { flex: 1 1 220px; }
+        .project-footer { margin-top: auto; display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .project-footer .btn { width: 100%; }
 
         .screenshot-scroll {
             display: flex;
