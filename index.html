@@ -156,6 +156,20 @@
             box-shadow: 0 10px 20px rgba(99, 102, 241, 0.1);
         }
 
+        /* Ghost button (transparent style) */
+        .btn-ghost {
+            background: transparent;
+            color: var(--dark);
+            border: 2px solid rgba(99, 102, 241, 0.25);
+        }
+
+        .btn-ghost:hover {
+            background: rgba(99, 102, 241, 0.08);
+            color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.08);
+        }
+
         /* Section Styling */
         .section {
             padding: 6rem 5%;
@@ -410,6 +424,74 @@
             border-radius: 8px;
             flex: 0 0 auto;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        /* Image modal slider */
+        .image-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.8);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            padding: 24px;
+        }
+
+        .image-modal.open { display: flex; }
+
+        .image-modal .modal-content {
+            position: relative;
+            max-width: 92vw;
+            max-height: 86vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .image-modal img {
+            max-width: 92vw;
+            max-height: 82vh;
+            border-radius: 12px;
+            background: #000;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -14px;
+            right: -14px;
+            width: 40px;
+            height: 40px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            cursor: pointer;
+            font-size: 22px;
+        }
+
+        .modal-prev { left: -56px; }
+        .modal-next { right: -56px; }
+
+        .modal-counter {
+            position: absolute;
+            bottom: -28px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 0.9rem;
         }
 
         /* Contact Section */
@@ -826,8 +908,8 @@
                         <ul>
                             <li>Flutter</li>
                             <li>React.js (Admin & Writer)</li>
-                            <li>Node.js</li>
-                            <li>MongoDB</li>
+                            <li>Node.js (API)</li>
+                            <li>MongoDB (Database)</li>
                         </ul>
                         <div class="badges">
                             <span class="badge">Flutter</span>
@@ -840,13 +922,8 @@
                             <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener">Visit Website</a>
                         </div>
                     </div>
-                    <div class="screenshot-scroll">
-                        <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss1.png?raw=true" alt="Chanchal Tales app screenshot 1"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss2.png?raw=true" alt="Chanchal Tales app screenshot 2"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss3.png?raw=true" alt="Chanchal Tales app screenshot 3"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss4.png?raw=true" alt="Chanchal Tales app screenshot 4"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss5.png?raw=true" alt="Chanchal Tales app screenshot 5"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss6.png?raw=true" alt="Chanchal Tales app screenshot 6"/>
+                    <div class="project-actions">
+                        <button class="btn btn-ghost" data-gallery-button data-gallery='["https://github.com/yashrp1/yash/blob/main/chanchalTales_ss1.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss2.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss3.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss4.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss5.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss6.png?raw=true"]'>View App Images</button>
                     </div>
                 </div>
 
@@ -869,17 +946,18 @@
                             <li>PHP</li>
                             <li>MySQL</li>
                         </ul>
+                        <div class="badges">
+                            <span class="badge">Flutter</span>
+                            <span class="badge">PHP</span>
+                            <span class="badge">MySQL</span>
+                            <span class="badge">PhpMyAdmin</span>
+                        </div>
                         <div class="project-actions">
                             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener">View on Google Play</a>
                         </div>
                     </div>
-                    <div class="screenshot-scroll">
-                        <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss1.jpeg?raw=true" alt="Online LR Maker screenshot 1"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss2.jpeg?raw=true" alt="Online LR Maker screenshot 2"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss3.jpeg?raw=true" alt="Online LR Maker screenshot 3"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss4.jpeg?raw=true" alt="Online LR Maker screenshot 4"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss5.jpeg?raw=true" alt="Online LR Maker screenshot 5"/>
-                        <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss6.jpeg?raw=true" alt="Online LR Maker screenshot 6"/>
+                    <div class="project-actions">
+                        <button class="btn btn-ghost" data-gallery-button data-gallery='["https://github.com/yashrp1/yash/blob/main/onlineLR_ss1.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss2.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss3.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss4.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss5.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss6.jpeg?raw=true"]'>View App Images</button>
                     </div>
                 </div>
             </div>
@@ -933,6 +1011,17 @@
         </div>
     </footer>
 
+    <!-- Image Modal -->
+    <div class="image-modal" id="imageModal" aria-hidden="true">
+        <div class="modal-content">
+            <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous">‹</button>
+            <img id="modalImage" alt="Project screenshot"/>
+            <button class="modal-nav modal-next" id="modalNext" aria-label="Next">›</button>
+            <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+            <div class="modal-counter" id="modalCounter"></div>
+        </div>
+    </div>
+
     <script>
         // Prefer GitHub-hosted images like the profile picture, with local fallback
         (function() {
@@ -948,6 +1037,73 @@
                     }
                 };
                 img.src = githubSrc;
+            });
+        })();
+
+        // Modal slider logic
+        (function() {
+            var modal = document.getElementById('imageModal');
+            var modalImage = document.getElementById('modalImage');
+            var modalPrev = document.getElementById('modalPrev');
+            var modalNext = document.getElementById('modalNext');
+            var modalClose = document.getElementById('modalClose');
+            var modalCounter = document.getElementById('modalCounter');
+            var images = [];
+            var index = 0;
+
+            function openModal(gallery) {
+                images = gallery;
+                index = 0;
+                updateImage();
+                modal.classList.add('open');
+                modal.setAttribute('aria-hidden', 'false');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function updateImage() {
+                if (!images.length) return;
+                modalImage.src = images[index];
+                modalCounter.textContent = (index + 1) + ' / ' + images.length;
+            }
+
+            function closeModal() {
+                modal.classList.remove('open');
+                modal.setAttribute('aria-hidden', 'true');
+                document.body.style.overflow = '';
+            }
+
+            modalPrev.addEventListener('click', function() {
+                index = (index - 1 + images.length) % images.length;
+                updateImage();
+            });
+
+            modalNext.addEventListener('click', function() {
+                index = (index + 1) % images.length;
+                updateImage();
+            });
+
+            modalClose.addEventListener('click', closeModal);
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) closeModal();
+            });
+
+            document.addEventListener('keydown', function(e) {
+                if (!modal.classList.contains('open')) return;
+                if (e.key === 'Escape') closeModal();
+                if (e.key === 'ArrowLeft') modalPrev.click();
+                if (e.key === 'ArrowRight') modalNext.click();
+            });
+
+            document.querySelectorAll('[data-gallery-button]').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    try {
+                        var gallery = JSON.parse(btn.getAttribute('data-gallery'));
+                        if (Array.isArray(gallery) && gallery.length) {
+                            openModal(gallery);
+                        }
+                    } catch (err) {}
+                });
             });
         })();
 
