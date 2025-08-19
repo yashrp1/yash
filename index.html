@@ -195,6 +195,12 @@
             border-radius: 2px;
         }
 
+        /* Generic container used in sections */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         /* About Section */
         .about-grid {
             display: grid;
@@ -319,6 +325,7 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #eef2ff;
             transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
@@ -327,7 +334,8 @@
 
         .project-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.12);
+            border-color: #e0e7ff;
         }
 
         .project-header {
@@ -354,6 +362,11 @@
         .project-header p {
             font-size: 0.95rem;
             color: var(--gray);
+            min-height: 48px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
 
         .project-content {
@@ -371,6 +384,16 @@
 
         .project-content ul {
             padding-left: 20px;
+        }
+
+        /* Technologies list as responsive grid for better fill */
+        .project-content ul.tech-list {
+            list-style: disc inside;
+            padding-left: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            row-gap: 8px;
+            column-gap: 16px;
         }
 
         .project-content li {
@@ -418,6 +441,7 @@
             flex-wrap: wrap;
         }
         .project-actions.buttons-main { margin-top: auto; }
+        .project-actions .btn i { margin-right: 8px; }
 
         .screenshot-scroll {
             display: flex;
@@ -913,7 +937,7 @@
                     </div>
                     <div class="project-content">
                         <h4>Technologies:</h4>
-                        <ul>
+                        <ul class="tech-list">
                             <li>Flutter</li>
                             <li>React.js (Admin & Writer)</li>
                             <li>Node.js (API)</li>
@@ -926,8 +950,8 @@
                             <span class="badge">MongoDB</span>
                         </div>
                         <div class="project-actions buttons-main">
-                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.crsnovelsandaudiobooks&hl=en_IN" target="_blank" rel="noopener">View on Google Play</a>
-                            <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener">Visit Website</a>
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.crsnovelsandaudiobooks&hl=en_IN" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
+                            <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener"><i class="fa fa-globe"></i>Visit Website</a>
                         </div>
                     </div>
                     <div class="project-actions">
@@ -949,10 +973,11 @@
                     </div>
                     <div class="project-content">
                         <h4>Technologies:</h4>
-                        <ul>
+                        <ul class="tech-list">
                             <li>Flutter</li>
                             <li>PHP</li>
                             <li>MySQL</li>
+                            <li>PhpMyAdmin</li>
                         </ul>
                         <div class="badges">
                             <span class="badge">Flutter</span>
@@ -961,7 +986,7 @@
                             <span class="badge">PhpMyAdmin</span>
                         </div>
                         <div class="project-actions buttons-main">
-                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener">View on Google Play</a>
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
                         </div>
                     </div>
                     <div class="project-actions">
@@ -1031,23 +1056,6 @@
     </div>
 
     <script>
-        // Prefer GitHub-hosted images like the profile picture, with local fallback
-        (function() {
-            var GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/yashrp1/yash/main/';
-            var imgs = document.querySelectorAll('img[data-github-path]');
-            imgs.forEach(function(img) {
-                var githubPath = img.getAttribute('data-github-path');
-                var localSrc = img.getAttribute('data-local-src') || img.getAttribute('src');
-                var githubSrc = GITHUB_RAW_BASE + githubPath;
-                img.onerror = function() {
-                    if (img.src !== localSrc) {
-                        img.src = localSrc;
-                    }
-                };
-                img.src = githubSrc;
-            });
-        })();
-
         // Modal slider logic
         (function() {
             var modal = document.getElementById('imageModal');
