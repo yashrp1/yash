@@ -12,6 +12,8 @@
             --primary-dark: #4f46e5;
             --dark: #0f172a;
             --light: #f8fafc;
+            --lighter: #ffffff;
+            --light-gray: #e5e7eb;
             --gray: #94a3b8;
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -356,6 +358,60 @@
             font-size: 0.9rem;
         }
 
+        /* Project extras */
+        .project-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .project-logo {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            object-fit: cover;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background: #eef2ff;
+            color: var(--primary-dark);
+            padding: 4px 10px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+
+        .project-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .screenshot-scroll {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 12px;
+            background: white;
+        }
+
+        .screenshot-scroll img {
+            height: 260px;
+            border-radius: 8px;
+            flex: 0 0 auto;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
         /* Contact Section */
         .contact {
             background-color: var(--lighter);
@@ -552,6 +608,7 @@
             <a href="#about">About</a>
             <a href="#experience">Experience</a>
             <a href="#projects">Projects</a>
+            <a href="#solo-projects">Solo Projects</a>
             <a href="#contact">Contact</a>
         </div>
     </nav>
@@ -563,7 +620,7 @@
             <p>I build beautiful, high-performance cross-platform applications that deliver exceptional user experiences.</p>
             <div class="btn-group">
                 <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                <a href="#projects" class="btn btn-outline">View My Work</a>
+                <a href="#solo-projects" class="btn btn-outline">View My Work</a>
             </div>
         </div>
     </section>
@@ -743,20 +800,86 @@
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Solo Projects Section -->
+    <section id="solo-projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Solo Projects</h2>
+            <div class="project-grid">
+                <!-- Chanchal Tales Creations -->
                 <div class="project-card">
                     <div class="project-header">
-                        <span class="company">Personal Project</span>
-                        <h3>OnlineLRGenerator</h3>
-                        <p>Transport Bilty generator application</p>
+                        <div class="project-meta">
+                            <img class="project-logo" src="../assets/chanchaltales_logo.jpeg" alt="Chanchal Tales Creations Logo" data-github-path="assets/chanchaltales_logo.jpeg" data-local-src="../assets/chanchaltales_logo.jpeg"/>
+                            <div>
+                                <span class="company">Personal Project</span>
+                                <h3 style="margin: 6px 0 0 0;">Chanchal Tales Creations</h3>
+                            </div>
+                        </div>
+                        <p>All-in-one Novels and Audiobooks platform with mobile apps and web presence</p>
                     </div>
                     <div class="project-content">
-                        <h4>Key Features:</h4>
+                        <h4>Technologies:</h4>
                         <ul>
-                            <li>Built with Flutter frontend</li>
-                            <li>PHP API for data processing</li>
-                            <li>MySQL database management</li>
+                            <li>Flutter</li>
+                            <li>React.js (Admin & Writer)</li>
+                            <li>Node.js</li>
+                            <li>MongoDB</li>
                         </ul>
+                        <div class="badges">
+                            <span class="badge">Flutter</span>
+                            <span class="badge">React.js (Admin & Writer)</span>
+                            <span class="badge">Node.js</span>
+                            <span class="badge">MongoDB</span>
+                        </div>
+                        <div class="project-actions">
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.crsnovelsandaudiobooks&hl=en_IN" target="_blank" rel="noopener">View on Google Play</a>
+                            <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener">Visit Website</a>
+                        </div>
+                    </div>
+                    <div class="screenshot-scroll">
+                        <img src="../assets/chanchalTales_ss1.png" alt="Chanchal Tales app screenshot 1" data-github-path="assets/chanchalTales_ss1.png" data-local-src="../assets/chanchalTales_ss1.png"/>
+                        <img src="../assets/chanchalTales_ss2.png" alt="Chanchal Tales app screenshot 2" data-github-path="assets/chanchalTales_ss2.png" data-local-src="../assets/chanchalTales_ss2.png"/>
+                        <img src="../assets/chanchalTales_ss3.png" alt="Chanchal Tales app screenshot 3" data-github-path="assets/chanchalTales_ss3.png" data-local-src="../assets/chanchalTales_ss3.png"/>
+                        <img src="../assets/chanchalTales_ss4.png" alt="Chanchal Tales app screenshot 4" data-github-path="assets/chanchalTales_ss4.png" data-local-src="../assets/chanchalTales_ss4.png"/>
+                        <img src="../assets/chanchalTales_ss5.png" alt="Chanchal Tales app screenshot 5" data-github-path="assets/chanchalTales_ss5.png" data-local-src="../assets/chanchalTales_ss5.png"/>
+                        <img src="../assets/chanchalTales_ss6.png" alt="Chanchal Tales app screenshot 6" data-github-path="assets/chanchalTales_ss6.png" data-local-src="../assets/chanchalTales_ss6.png"/>
+                    </div>
+                </div>
+
+                <!-- Online LR Maker -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-meta">
+                            <img class="project-logo" src="../assets/onlineLRMaker_logo.jpeg" alt="Online LR Maker Logo" data-github-path="assets/onlineLRMaker_logo.jpeg" data-local-src="../assets/onlineLRMaker_logo.jpeg"/>
+                            <div>
+                                <span class="company">Personal Project</span>
+                                <h3 style="margin: 6px 0 0 0;">Online LR Maker</h3>
+                            </div>
+                        </div>
+                        <p>Transport Bilty (LR) generator application for logistics workflows</p>
+                    </div>
+                    <div class="project-content">
+                        <h4>Technologies:</h4>
+                        <ul>
+                            <li>Flutter</li>
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                        </ul>
+                        <div class="project-actions">
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener">View on Google Play</a>
+                        </div>
+                    </div>
+                    <div class="screenshot-scroll">
+                        <img src="../assets/onlineLR_ss1.jpeg" alt="Online LR Maker screenshot 1" data-github-path="assets/onlineLR_ss1.jpeg" data-local-src="../assets/onlineLR_ss1.jpeg"/>
+                        <img src="../assets/onlineLR_ss2.jpeg" alt="Online LR Maker screenshot 2" data-github-path="assets/onlineLR_ss2.jpeg" data-local-src="../assets/onlineLR_ss2.jpeg"/>
+                        <img src="../assets/onlineLR_ss3.jpeg" alt="Online LR Maker screenshot 3" data-github-path="assets/onlineLR_ss3.jpeg" data-local-src="../assets/onlineLR_ss3.jpeg"/>
+                        <img src="../assets/onlineLR_ss4.jpeg" alt="Online LR Maker screenshot 4" data-github-path="assets/onlineLR_ss4.jpeg" data-local-src="../assets/onlineLR_ss4.jpeg"/>
+                        <img src="../assets/onlineLR_ss5.jpeg" alt="Online LR Maker screenshot 5" data-github-path="assets/onlineLR_ss5.jpeg" data-local-src="../assets/onlineLR_ss5.jpeg"/>
+                        <img src="../assets/onlineLR_ss6.jpeg" alt="Online LR Maker screenshot 6" data-github-path="assets/onlineLR_ss6.jpeg" data-local-src="../assets/onlineLR_ss6.jpeg"/>
                     </div>
                 </div>
             </div>
@@ -803,6 +926,7 @@
                 <a href="#about">About</a>
                 <a href="#experience">Experience</a>
                 <a href="#projects">Projects</a>
+                <a href="#solo-projects">Solo Projects</a>
                 <a href="#contact">Contact</a>
             </div>
             <p class="copyright">&copy; <script>document.write(new Date().getFullYear())</script> Yash Pareek. All rights reserved.</p>
@@ -810,6 +934,23 @@
     </footer>
 
     <script>
+        // Prefer GitHub-hosted images like the profile picture, with local fallback
+        (function() {
+            var GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/yashrp1/yash/main/';
+            var imgs = document.querySelectorAll('img[data-github-path]');
+            imgs.forEach(function(img) {
+                var githubPath = img.getAttribute('data-github-path');
+                var localSrc = img.getAttribute('data-local-src') || img.getAttribute('src');
+                var githubSrc = GITHUB_RAW_BASE + githubPath;
+                img.onerror = function() {
+                    if (img.src !== localSrc) {
+                        img.src = localSrc;
+                    }
+                };
+                img.src = githubSrc;
+            });
+        })();
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
