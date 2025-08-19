@@ -316,7 +316,7 @@
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 25px;
         }
 
@@ -332,12 +332,7 @@
             height: 100%;
         }
 
-        /* 2 cards per row on desktop using the 12-col grid */
-        .project-grid > .project-card { grid-column: span 6; }
-
-        @media (max-width: 900px) {
-            .project-grid > .project-card { grid-column: span 12; }
-        }
+        /* Remove explicit column spans; auto-fill handles layout */
 
         .project-card:hover {
             transform: translateY(-5px);
@@ -969,14 +964,12 @@
                             <span class="badge">Node.js</span>
                             <span class="badge">MongoDB</span>
                         </div>
-                        <div class="project-actions buttons-main project-footer">
-                            <div class="primary-actions">
-                                <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.crsnovelsandaudiobooks&hl=en_IN" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
-                                <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener"><i class="fa fa-globe"></i>Visit Website</a>
-                            </div>
+                        <div class="project-actions buttons-main">
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.crsnovelsandaudiobooks&hl=en_IN" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
+                            <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener"><i class="fa fa-globe"></i>Visit Website</a>
                         </div>
                     </div>
-                    <div class="project-actions images-actions"><button class="btn btn-ghost" data-gallery-button data-gallery='["https://github.com/yashrp1/yash/blob/main/chanchalTales_ss1.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss2.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss3.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss4.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss5.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss6.png?raw=true"]'>View App Images</button></div>
+                    <div class="project-actions"><button class="btn btn-ghost" data-gallery-button data-gallery='["https://github.com/yashrp1/yash/blob/main/chanchalTales_ss1.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss2.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss3.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss4.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss5.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss6.png?raw=true"]'>View App Images</button></div>
                 </div>
 
                 <!-- Online LR Maker -->
@@ -1005,13 +998,11 @@
                             <span class="badge">MySQL</span>
                             <span class="badge">PhpMyAdmin</span>
                         </div>
-                        <div class="project-actions buttons-main project-footer">
-                            <div class="primary-actions">
-                                <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
-                            </div>
+                        <div class="project-actions buttons-main">
+                            <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
                         </div>
                     </div>
-                    <div class="project-actions images-actions"><button class="btn btn-ghost" data-gallery-button data-gallery='["https://github.com/yashrp1/yash/blob/main/onlineLR_ss1.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss2.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss3.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss4.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss5.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss6.jpeg?raw=true"]'>View App Images</button></div>
+                    <div class="project-actions"><button class="btn btn-ghost" data-gallery-button data-gallery='["https://github.com/yashrp1/yash/blob/main/onlineLR_ss1.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss2.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss3.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss4.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss5.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss6.jpeg?raw=true"]'>View App Images</button></div>
                 </div>
             </div>
         </div>
