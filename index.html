@@ -316,7 +316,7 @@
 
         .project-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            grid-template-columns: repeat(12, 1fr);
             gap: 25px;
         }
 
@@ -330,6 +330,13 @@
             display: flex;
             flex-direction: column;
             height: 100%;
+        }
+
+        /* 2 cards per row on desktop using the 12-col grid */
+        .project-grid > .project-card { grid-column: span 6; }
+
+        @media (max-width: 900px) {
+            .project-grid > .project-card { grid-column: span 12; }
         }
 
         .project-card:hover {
@@ -442,6 +449,10 @@
         }
         .project-actions.buttons-main { margin-top: auto; }
         .project-actions .btn i { margin-right: 8px; }
+        .project-footer { margin-top: auto; }
+
+        /* Ensure buttons have same width where there are two */
+        .project-footer .btn { flex: 1 1 220px; }
 
         .screenshot-scroll {
             display: flex;
@@ -949,7 +960,7 @@
                             <span class="badge">Node.js</span>
                             <span class="badge">MongoDB</span>
                         </div>
-                        <div class="project-actions buttons-main">
+                        <div class="project-actions buttons-main project-footer">
                             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.crsnovelsandaudiobooks&hl=en_IN" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
                             <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener"><i class="fa fa-globe"></i>Visit Website</a>
                         </div>
@@ -985,7 +996,7 @@
                             <span class="badge">MySQL</span>
                             <span class="badge">PhpMyAdmin</span>
                         </div>
-                        <div class="project-actions buttons-main">
+                        <div class="project-actions buttons-main project-footer">
                             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
                         </div>
                     </div>
