@@ -122,9 +122,10 @@
         }
 
         .btn {
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 0.875rem;
             transition: var(--transition);
             text-decoration: none;
             display: inline-block;
@@ -425,6 +426,7 @@
             flex-wrap: wrap;
             gap: 8px;
             margin-top: 10px;
+            margin-bottom: 20px;
         }
 
         .badge {
@@ -438,25 +440,86 @@
 
         .project-actions {
             display: flex;
-            gap: 12px;
+            gap: 8px;
             margin-top: 16px;
             flex-wrap: wrap;
         }
-        .project-actions.buttons-main { margin-top: auto; }
-        .project-actions .btn i { margin-right: 8px; }
-        .project-footer {
-            margin-top: auto;
-            display: grid;
-            gap: 12px;
+        .project-actions.buttons-main { 
+            margin-top: auto; 
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
         }
-        .project-footer .primary-actions {
-            display: grid;
-            gap: 12px;
-            grid-template-columns: repeat(2, 1fr);
+        .project-actions.buttons-main .btn { 
+            flex: 1;
+            min-width: 140px;
+            text-align: center;
         }
-        .project-footer .primary-actions .btn { width: 100%; }
-        .project-footer .primary-actions .btn:only-child { grid-column: 1 / -1; }
-        .project-footer .images-actions .btn { width: 100%; }
+        .project-actions .btn i { margin-right: 6px; }
+        .project-actions.images-only {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+        }
+        .project-actions.images-only .btn { 
+            width: 100%; 
+            max-width: 200px;
+        }
+
+        /* App Images Display */
+        .app-images {
+            margin-top: 35px;
+            padding: 20px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .app-images h5 {
+            margin: 0 0 20px 0;
+            color: var(--dark);
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 12px;
+            justify-items: center;
+        }
+
+        .image-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease;
+            width: 100%;
+            max-width: 120px;
+        }
+
+        .image-item:hover {
+            transform: scale(1.05);
+        }
+
+        .image-item img {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 3/4;
+            object-fit: contain;
+            display: block;
+            background: #f8fafc;
+        }
+
+        /* Solo Projects specific layout */
+        #solo-projects .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
         .screenshot-scroll {
             display: flex;
@@ -473,73 +536,6 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
         }
 
-        /* Image modal slider */
-        .image-modal {
-            position: fixed;
-            inset: 0;
-            background: rgba(15, 23, 42, 0.8);
-            display: none;
-            align-items: center;
-            justify-content: center;
-            z-index: 1000;
-            padding: 24px;
-        }
-
-        .image-modal.open { display: flex; }
-
-        .image-modal .modal-content {
-            position: relative;
-            max-width: 92vw;
-            max-height: 86vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .image-modal img {
-            max-width: 92vw;
-            max-height: 82vh;
-            border-radius: 12px;
-            background: #000;
-        }
-
-        .modal-close {
-            position: absolute;
-            top: -14px;
-            right: -14px;
-            width: 40px;
-            height: 40px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            cursor: pointer;
-            font-size: 18px;
-        }
-
-        .modal-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 44px;
-            height: 44px;
-            border-radius: 999px;
-            background: rgba(255, 255, 255, 0.9);
-            border: none;
-            cursor: pointer;
-            font-size: 22px;
-        }
-
-        .modal-prev { left: -56px; }
-        .modal-next { right: -56px; }
-
-        .modal-counter {
-            position: absolute;
-            bottom: -28px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #fff;
-            font-size: 0.9rem;
-        }
 
         /* Contact Section */
         .contact {
@@ -968,8 +964,30 @@
                             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.crsnovelsandaudiobooks&hl=en_IN" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
                             <a class="btn btn-outline" href="https://chanchaltalescreations.com/" target="_blank" rel="noopener"><i class="fa fa-globe"></i>Visit Website</a>
                         </div>
+                        <div class="app-images">
+                            <h5>App Screenshots</h5>
+                            <div class="images-grid">
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss1.png?raw=true" alt="Chanchal Tales Screenshot 1"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss2.png?raw=true" alt="Chanchal Tales Screenshot 2"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss3.png?raw=true" alt="Chanchal Tales Screenshot 3"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss4.png?raw=true" alt="Chanchal Tales Screenshot 4"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss5.png?raw=true" alt="Chanchal Tales Screenshot 5"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/chanchalTales_ss6.png?raw=true" alt="Chanchal Tales Screenshot 6"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-actions"><button class="btn btn-ghost" data-gallery-button data-gallery='["https://github.com/yashrp1/yash/blob/main/chanchalTales_ss1.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss2.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss3.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss4.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss5.png?raw=true","https://github.com/yashrp1/yash/blob/main/chanchalTales_ss6.png?raw=true"]'>View App Images</button></div>
                 </div>
 
                 <!-- Online LR Maker -->
@@ -1001,8 +1019,30 @@
                         <div class="project-actions buttons-main">
                             <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.onlineLrGenrator" target="_blank" rel="noopener"><i class="fab fa-google-play"></i>View on Google Play</a>
                         </div>
+                        <div class="app-images">
+                            <h5>App Screenshots</h5>
+                            <div class="images-grid">
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss1.jpeg?raw=true" alt="Online LR Screenshot 1"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss2.jpeg?raw=true" alt="Online LR Screenshot 2"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss3.jpeg?raw=true" alt="Online LR Screenshot 3"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss4.jpeg?raw=true" alt="Online LR Screenshot 4"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss5.jpeg?raw=true" alt="Online LR Screenshot 5"/>
+                                </div>
+                                <div class="image-item">
+                                    <img src="https://github.com/yashrp1/yash/blob/main/onlineLR_ss6.jpeg?raw=true" alt="Online LR Screenshot 6"/>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="project-actions"><button class="btn btn-ghost" data-gallery-button data-gallery='["https://github.com/yashrp1/yash/blob/main/onlineLR_ss1.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss2.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss3.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss4.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss5.jpeg?raw=true","https://github.com/yashrp1/yash/blob/main/onlineLR_ss6.jpeg?raw=true"]'>View App Images</button></div>
                 </div>
             </div>
         </div>
@@ -1055,84 +1095,8 @@
         </div>
     </footer>
 
-    <!-- Image Modal -->
-    <div class="image-modal" id="imageModal" aria-hidden="true">
-        <div class="modal-content">
-            <button class="modal-nav modal-prev" id="modalPrev" aria-label="Previous">‹</button>
-            <img id="modalImage" alt="Project screenshot"/>
-            <button class="modal-nav modal-next" id="modalNext" aria-label="Next">›</button>
-            <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
-            <div class="modal-counter" id="modalCounter"></div>
-        </div>
-    </div>
 
     <script>
-        // Modal slider logic
-        (function() {
-            var modal = document.getElementById('imageModal');
-            var modalImage = document.getElementById('modalImage');
-            var modalPrev = document.getElementById('modalPrev');
-            var modalNext = document.getElementById('modalNext');
-            var modalClose = document.getElementById('modalClose');
-            var modalCounter = document.getElementById('modalCounter');
-            var images = [];
-            var index = 0;
-
-            function openModal(gallery) {
-                images = gallery;
-                index = 0;
-                updateImage();
-                modal.classList.add('open');
-                modal.setAttribute('aria-hidden', 'false');
-                document.body.style.overflow = 'hidden';
-            }
-
-            function updateImage() {
-                if (!images.length) return;
-                modalImage.src = images[index];
-                modalCounter.textContent = (index + 1) + ' / ' + images.length;
-            }
-
-            function closeModal() {
-                modal.classList.remove('open');
-                modal.setAttribute('aria-hidden', 'true');
-                document.body.style.overflow = '';
-            }
-
-            modalPrev.addEventListener('click', function() {
-                index = (index - 1 + images.length) % images.length;
-                updateImage();
-            });
-
-            modalNext.addEventListener('click', function() {
-                index = (index + 1) % images.length;
-                updateImage();
-            });
-
-            modalClose.addEventListener('click', closeModal);
-
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) closeModal();
-            });
-
-            document.addEventListener('keydown', function(e) {
-                if (!modal.classList.contains('open')) return;
-                if (e.key === 'Escape') closeModal();
-                if (e.key === 'ArrowLeft') modalPrev.click();
-                if (e.key === 'ArrowRight') modalNext.click();
-            });
-
-            document.querySelectorAll('[data-gallery-button]').forEach(function(btn) {
-                btn.addEventListener('click', function() {
-                    try {
-                        var gallery = JSON.parse(btn.getAttribute('data-gallery'));
-                        if (Array.isArray(gallery) && gallery.length) {
-                            openModal(gallery);
-                        }
-                    } catch (err) {}
-                });
-            });
-        })();
 
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
